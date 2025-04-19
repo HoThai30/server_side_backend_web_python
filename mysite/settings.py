@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
+    'shop.apps.ShopConfig',
     'tinymce',
     'django_cleanup.apps.CleanupConfig',
     'django.contrib.humanize',
@@ -74,6 +75,8 @@ TEMPLATES = [
                 'news.my_context.items_article_sidebar_ramdom',
                 'news.my_context.items_article_header_trending',
                 'news.my_context.items_price_sidebar_coin',
+                'shop.my_context.items_category_menu',
+                'shop.my_context.item_cart_info',
 
             ],
         },
@@ -92,14 +95,22 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
 
-    'default': {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'django_web',
+    #     'USER': 'root' ,
+    #     # 'PASSWORD': ,
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # },
+     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_web',
-        'USER': 'root' ,
-        # 'PASSWORD': ,
+        'USER': 'root',
+        # 'PASSWORD': 'your_password',
         'HOST': 'localhost',
-        'POST': '3306',
-    }
+        'PORT': '3306',
+    },
 }
 
 

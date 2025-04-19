@@ -1,0 +1,32 @@
+{% extends "shop/layout.html" %}
+
+{% load static %}
+{% load render_share_shop %}
+{% block content %}
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-5">
+                {% include 'shop/pages/category/sidebar.html' %}
+            </div>
+            <div class="col-lg-9 col-md-7">
+                <div class="filter__item">
+                    <div class="row justify-content-between">
+                        {% include 'shop/pages/category/order-and-count.html' %}
+                    </div>
+                </div>
+                <div class="row">
+
+
+                    {% render_share_shop 'product-grid.html' items_product params.keyword %}
+                
+                    
+                    
+                </div>
+
+                {% include 'shop/pages/category/pagination.html' %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

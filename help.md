@@ -1,4 +1,5 @@
- 
+ - tạo project mới: django-admin startproject mysite
+ - tạo app mới: python manage.py startapp polls
  
  
  # nhúng và tối ưu hóa giao diện -->
@@ -34,4 +35,4 @@
 
  python manage.py migrate
  
- python manage.py makemigrations news
+ python manage.py makemigrations 

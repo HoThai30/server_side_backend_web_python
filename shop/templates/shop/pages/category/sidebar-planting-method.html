@@ -1,0 +1,10 @@
+<h4>Phương Pháp Trồng</h4>
+<div class = "list-planting-method">
+{% for item in items_planting_methods %}
+<a href="?planting={{item.id}}" class="sidebar__item__size">
+    <span for="large"data-active="{{item.id}}">
+       {{item.name}}
+    </span>
+</a>
+{% endfor %}
+</div>
